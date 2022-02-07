@@ -1,0 +1,299 @@
+
+/*reset*/
+* {
+    margin: 0;
+    padding:  0;
+}
+
+/* grid */
+.container{
+    display:grid;
+    min-height: 200vh;
+    grid-template-areas:
+                        "header header header" 
+                          "main main main"
+                          "cards cards cards"
+                         "footer footer footer";
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+                         
+}
+header{
+    grid-area: header;
+}
+
+
+main {
+    grid-area: main;
+}
+
+.cards{
+    
+    grid-area: cards;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+footer {
+    grid-area: footer;
+}
+
+
+/* flex*/
+body{
+    background: linear-gradient(0deg,rgba(167,74,221,1) 0%, rgba(251,251,251,1) 100% );
+    
+}
+
+.header{
+    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+   
+}
+
+
+
+.Nav{
+    background:linear-gradient(90deg, rgba(2,218,23,1) 4%, rgba(1,0,9,1) 74%);
+    display: flex;
+    flex-direction: row;
+    justify-content: center  ;
+    align-items: flex-end;
+    width: 100%;
+    
+    
+}
+
+
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    align-items:flex-end;
+    list-style: none;
+    width: 100%;
+    
+
+
+  
+}
+
+
+.menu > li > a{
+    display: flex;
+    padding: 10px 10px;
+    margin: 10px;
+    color: rgb(238, 237, 237);
+    font-size: 25px;
+    font-weight: 100;
+    text-decoration: none;
+
+    
+   
+}
+/* transformaciones */
+
+.menu > li > a:hover{
+    color:rgba(167,74,221,1);
+    transform: scale(1.1);
+    opacity: 0.6;
+    background-color: azure;
+    font-weight: bold;
+    
+    
+}
+
+
+.cards > .card > img:hover{
+    transform: scale(1.2);
+}
+
+.logo{
+    display:flex;
+    width:50%;
+    margin:0;
+    justify-content:start;
+ 
+    
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    margin-top: 100px;
+
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    margin-top: 30px;
+}
+
+img{
+    
+    width: 80%;
+    height: 80%;
+    padding: 20px;
+    margin-top: 50px;
+    align-content: center;
+}
+
+.imgcard{
+    width: 80%;
+    height: auto;
+    align-content: center;
+}
+
+
+
+
+
+.card{
+    
+    border: solid 2px rgb(0, 0, 10);
+    background-color: white;
+    width: 300px;
+    height: auto;
+    margin: 30px;
+    padding: 10px;
+    border-radius: 5%;
+    text-align: center;
+    
+    
+  
+}
+
+.contenedorNosotros{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    
+    
+}
+
+.texto {
+    text-align: center;
+    margin-top: 100px;
+  
+    
+
+}
+
+p {
+    margin: 20px;
+    padding: 10px;
+    align-content: center;
+    color:black;
+    font-size: 20px;
+    justify-content: center;
+
+}
+
+.bannerNos{
+    width: 100%;
+    height: auto;
+   
+
+}
+/*flex*/
+
+footer{
+    display: flex;
+
+}
+
+.redesSociales{
+    display: flex;
+    width: 100%;
+    align-content: center;
+    justify-content: space-evenly;
+    justify-content: flex-end;
+  
+      
+}
+
+.icons {
+    display: inline-flex;
+    width: 100px;
+    margin: 20px;
+    
+}
+
+
+.imglogo{
+
+    width: 50%;
+    height: auto; 
+    }
+
+
+
+
+.formulario{
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+
+/* medias cueries*/
+
+@media screen and (max-width: 768px) {
+
+    .Nav{
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+
+    }
+
+    .Nav span {
+        margin: 0;
+        justify-content:center;
+        height: 100%;
+    }
+    
+    .header{
+        flex-direction: column;
+    }
+
+    .card {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+    .Nav{
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+
+    }
+
+    .Nav span {
+        margin: 0;
+        justify-content:center;
+        height: 100%;
+    }
+    
+    .header{
+        flex-direction: column;
+    }
+
+    .card {
+        flex-direction: column;
+        width: 40%;
+    }
+}
+    
+   
+
+
+
+
